@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/menuProfile">
+
+    <fragment
+        android:id="@+id/menuProfile"
+        android:name="cl.matiasselman_android.bazar_appv4.ProfileFragment"
+        android:label="profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/menuShipping"
+        android:name="cl.matiasselman_android.bazar_appv4.ShippingFragment"
+        android:label="shipping"
+        tools:layout="@layout/fragment_shipping" />
+    <fragment
+        android:id="@+id/menuSettings"
+        android:name="cl.matiasselman_android.bazar_appv4.SettingsFragment"
+        android:label="settings"
+        tools:layout="@layout/fragment_settings" />
+</navigation>

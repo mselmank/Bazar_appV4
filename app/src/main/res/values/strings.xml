@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Bazar_appV4</string>
+    <string name="profile">Mi perfil </string>
+    <string name="shipping">Despachos </string>
+    <string name="about">Acerca de </string>
+    <string name="home">Inicio</string>
+    <string name="logout">Salir</string>
+    <string name="others">Otros</string>
+    <string name="settings">Configuracion</string>
+    <string name="support">Soporte</string>
+    <string name="verified">Verificado</string>
+    <string name="matias_selman">Matias Selman</string>
+    <string name="loginMessage">Bazar Chileno</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="wecolme_back">Bienvenido</string>
+    <string name="sign_in">Ingresa para continuar</string>
+    <string name="you_email_com">correo</string>
+    <string name="pass">Contraseña</string>
+    <string name="createAccount">Crea una cuenta nueva</string>
+
+
+</resources>

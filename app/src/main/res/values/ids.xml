@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="scrollTop" type="id"/>
+    <item name="inputEmail" type="id"/>
+    <item name="principalLogo" type="id"/>
+    <item name="welcome" type="id"/>
+    <item name="recoverPass" type="id"/>
+    <item name="emailImage" type="id"/>
+    <item name="inputPass" type="id"/>
+    <item name="imageLock" type="id"/>
+    <item name="singToContinue" type="id"/>
+    <item name="loginButton" type="id"/>
+    <item name="registerButton" type="id" />
+</resources>

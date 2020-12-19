@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/home_icon"
+        android:title="@string/home"
+        />
+    <item
+        android:id="@+id/menuProfile"
+        android:icon="@drawable/my_profile_icon"
+        android:title="@string/profile"
+        />
+
+    <item
+        android:id="@+id/menuShipping"
+        android:icon="@drawable/shipping_icon"
+        android:title="@string/shipping"
+        />
+    <item
+        android:id="@+id/about"
+        android:icon="@drawable/about_icon"
+        android:title="@string/about"
+        />
+
+    <item
+        android:id="@+id/logout"
+        android:icon="@drawable/logout_icon"
+        android:title="@string/logout" />
+
+    <item android:title="@string/others">
+
+     <menu>
+
+         <item
+
+             android:id="@+id/menuSettings"
+             android:icon="@drawable/ic_settings"
+             android:title="@string/settings"/>
+         <item
+
+             android:id="@+id/menuSupport"
+             android:icon="@drawable/ic_support"
+             android:title="@string/support"/>
+
+
+    </menu>
+
+
+</item>
+
+</menu>
