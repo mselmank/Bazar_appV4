@@ -20,45 +20,18 @@
         android:textColor="@color/colorPrimaryText"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-
-    <ScrollView
-        android:id="@+id/scrollTop"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textTitle">
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
-
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginEnd="30dp">
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </LinearLayout>
-    </ScrollView>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/inputEmail"
-        android:layout_width="323dp"
-        android:layout_height="33dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
         android:background="@null"
         android:hint="@string/you_email_com"
         android:imeOptions="actionNext"
@@ -67,58 +40,49 @@
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
         android:textColor="@color/black"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.818"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textTitle"
-        app:layout_constraintVertical_bias="0.289" />
+        app:layout_constraintTop_toBottomOf="@+id/singToContinue" />
 
 
     <ImageView
         android:id="@+id/principalLogo"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginTop="31dp"
+        android:layout_marginTop="16dp"
         android:contentDescription="@string/app_name"
         android:src="@drawable/logo"
-        app:layout_constraintBottom_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textTitle"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="MissingConstraints"></ImageView>
+        tools:ignore="MissingConstraints" />
 
 
     <TextView
         android:id="@+id/welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="8dp"
         android:text="@string/wecolme_back"
         android:textColor="@color/colorAccent"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/inputEmail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textTitle"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/principalLogo" />
 
     <TextView
         android:id="@+id/singToContinue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="@string/sign_in"
         android:textColor="@color/colorGrey"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/inputEmail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/welcome"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/welcome" />
 
     <ImageView
         android:id="@+id/emailImage"
@@ -126,15 +90,19 @@
         android:layout_height="34dp"
         android:contentDescription="@string/app_name"
         android:src="@drawable/ic_email"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="242dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/inputEmail"
+        app:layout_constraintEnd_toStartOf="@+id/inputEmail"
+        app:layout_constraintTop_toTopOf="@+id/inputEmail"
+        tools:ignore="MissingConstraints" />
 
 
     <EditText
         android:id="@+id/inputPass"
-        android:layout_width="323dp"
-        android:layout_height="33dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:background="@null"
         android:hint="@string/pass"
         android:imeOptions="actionNext"
@@ -145,12 +113,9 @@
         android:textColor="@color/black"
         android:textSize="18dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/recoverPass"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.818"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputEmail"
-        app:layout_constraintVertical_bias="0.25" />
+        app:layout_constraintTop_toBottomOf="@+id/inputEmail" />
 
     <ImageView
         android:id="@+id/imageLock"
@@ -158,21 +123,20 @@
         android:layout_height="34dp"
         android:contentDescription="@string/app_name"
         android:src="@drawable/ic_lock"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="293dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/inputPass"
+        app:layout_constraintEnd_toStartOf="@+id/inputPass"
+        app:layout_constraintTop_toTopOf="@+id/inputPass"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/recoverPass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="73dp"
-        android:layout_marginBottom="33dp"
+        android:layout_marginTop="32dp"
         android:text="Recuperar contraseña"
         android:textColor="@color/colorBlue"
         android:textSize="13dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/loginButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputPass" />
@@ -181,30 +145,27 @@
         android:id="@+id/loginButton"
         android:layout_width="350sp"
         android:layout_height="55dp"
-        android:layout_marginBottom="200dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/background__button"
         android:text="Ingresa"
         android:textColor="@color/colorWhite"
-        android:background="@drawable/background__button"
         android:textColorHint="@color/colorWhite"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputPass"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/recoverPass" />
 
     <Button
         android:id="@+id/registerButton"
         android:layout_width="350sp"
         android:layout_height="55dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/background__button"
         android:text="Registrate"
         android:textColor="@color/colorWhite"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginButton"
-        app:layout_constraintVertical_bias="0.083" />
+        app:layout_constraintTop_toBottomOf="@+id/loginButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

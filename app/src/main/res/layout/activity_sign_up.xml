@@ -6,56 +6,46 @@
     android:layout_height="match_parent"
     tools:context=".SignUpActivity">
 
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
+    <EditText
+        android:id="@+id/inputName"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:gravity="center_vertical"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/inputEmail"
+        android:layout_height="40dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:background="@null"
+        android:hint="@string/name"
+        android:imeOptions="actionNext"
+        android:importantForAutofill="no"
+        android:inputType="textEmailAddress"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="MissingConstraints">
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
-
-        <ImageView
-            android:id="@+id/imageBack"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_gravity="start"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:contentDescription="@string/app_name"
-            android:src="@drawable/ic_arrow_back" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:text="Crear cuenta"
-            android:textSize="30sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:text="@string/createAccount"
-            android:textSize="15sp"
-            android:textStyle="normal" />
-
-
-    </LinearLayout>
+    <ImageView
+        android:id="@+id/userImage"
+        android:layout_width="40dp"
+        android:layout_height="34dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_assignment"
+        app:layout_constraintBottom_toBottomOf="@+id/inputName"
+        app:layout_constraintEnd_toStartOf="@+id/inputName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/inputName"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/inputEmail"
-        android:layout_width="323dp"
-        android:layout_height="33dp"
-        android:layout_marginBottom="476dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
         android:background="@null"
         android:hint="@string/you_email_com"
         android:imeOptions="actionNext"
@@ -64,20 +54,33 @@
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
         android:textColor="@color/black"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textTitle"
-        app:layout_constraintVertical_bias="0.289" />
+        app:layout_constraintTop_toBottomOf="@+id/inputName" />
 
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:text="@string/createAccount"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/inputPass"
-        android:layout_width="323dp"
-        android:layout_height="33dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
         android:background="@null"
         android:hint="@string/pass"
         android:imeOptions="actionNext"
@@ -86,55 +89,89 @@
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
         android:textColor="@color/black"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/recoverPass"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputEmail"
-        app:layout_constraintVertical_bias="0.25" />
+        app:layout_constraintTop_toBottomOf="@+id/inputEmail" />
+
+    <EditText
+        android:id="@+id/inputConfPass"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:background="@null"
+        android:hint="@string/passConf"
+        android:imeOptions="actionNext"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputPass" />
 
 
     <ImageView
         android:id="@+id/emailImage"
         android:layout_width="40dp"
         android:layout_height="34dp"
-        android:layout_marginTop="110dp"
         android:contentDescription="@string/app_name"
         android:src="@drawable/ic_email"
-        app:layout_constraintBottom_toTopOf="@+id/imageLock"
+        app:layout_constraintBottom_toBottomOf="@+id/inputEmail"
         app:layout_constraintEnd_toStartOf="@+id/inputEmail"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.043"
+        app:layout_constraintTop_toTopOf="@+id/inputEmail"
         tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imageLock2"
         android:layout_width="40dp"
         android:layout_height="34dp"
-        android:layout_marginBottom="23dp"
         android:contentDescription="@string/app_name"
         android:src="@drawable/ic_lock"
-        app:layout_constraintBottom_toTopOf="@+id/imageLock"
+        app:layout_constraintBottom_toBottomOf="@+id/inputPass"
         app:layout_constraintEnd_toStartOf="@+id/inputPass"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/inputPass"
+        tools:ignore="DuplicateIds,MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageLock2"
+        android:layout_width="40dp"
+        android:layout_height="34dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_lock"
+        app:layout_constraintBottom_toBottomOf="@+id/inputConfPass"
+        app:layout_constraintEnd_toStartOf="@+id/inputConfPass"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/inputConfPass"
         tools:ignore="DuplicateIds,MissingConstraints" />
 
     <EditText
         android:id="@+id/editTextPhone"
-        android:layout_width="323dp"
-        android:layout_height="33dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:background="@null"
         android:ems="10"
+        android:hint="@string/phone"
         android:inputType="phone"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
         android:textColor="@color/black"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputPass"
-        app:layout_constraintVertical_bias="0.059" />
+        app:layout_constraintTop_toBottomOf="@+id/inputConfPass" />
 
     <ImageView
         android:id="@+id/imageLock"
@@ -142,20 +179,20 @@
         android:layout_height="34dp"
         android:contentDescription="@string/app_name"
         android:src="@drawable/ic_phone"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextPhone"
         app:layout_constraintEnd_toStartOf="@+id/editTextPhone"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="335dp" />
+        app:layout_constraintTop_toTopOf="@+id/editTextPhone"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPhone"
+        app:layout_constraintTop_toBottomOf="@+id/registerButton"
         app:srcCompat="@drawable/logo_size" />
 
 
@@ -163,48 +200,54 @@
         android:id="@+id/registerButton"
         android:layout_width="350sp"
         android:layout_height="55dp"
-        android:layout_marginBottom="268dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/background__button"
         android:text="Registrate"
+        android:onClick="createUser"
         android:textColor="@color/colorWhite"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginButton"
-        app:layout_constraintVertical_bias="0.083" />
+        app:layout_constraintTop_toBottomOf="@+id/recoverPass" />
 
 
     <TextView
         android:id="@+id/recoverPass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:layout_marginBottom="33dp"
+        android:layout_marginTop="24dp"
         android:text="¿Ya tienes cuenta?"
         android:textColor="@color/colorGrey"
         android:textSize="13dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/loginButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.363"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputPass" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
 
     <TextView
         android:id="@+id/signInCreateAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:layout_marginBottom="33dp"
+        android:layout_marginTop="24dp"
         android:text="Ingresa"
         android:textColor="@color/colorBlue"
         android:textSize="15dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/loginButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.642"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputPass" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registerButton"
+        android:visibility="gone"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
