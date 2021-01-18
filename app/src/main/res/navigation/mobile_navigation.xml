@@ -29,6 +29,6 @@
     <fragment
         android:id="@+id/addOrderFragment"
         android:name="cl.matiasselman_android.bazar_appv4.ui.addOrder.AddOrderFragment"
-        android:label="add_order_fragment"
+        android:label="@string/add_order"
         tools:layout="@layout/fragment_add_order" />
 </navigation>

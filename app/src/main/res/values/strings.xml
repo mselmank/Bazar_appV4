@@ -31,6 +31,11 @@
     <string name="login_error_password_length">Contraseña debe tener más de 8 caracteres</string>
     <string name="login_error_invalid_telefono">Telefono debe ser valido</string>
     <string name="login_error_no_password_equals">Contraseñas deben ser iguales</string>
+    <string name="login_error_no_titulo">Titulo es obligatorio</string>
+    <string name="login_error_no_cliente">Nombre de cliente es obligatorio</string>
+    <string name="login_error_no_descripcion">Descripcion es obligatorio</string>
+    <string name="login_error_no_fecha">Fecha es obligatorio</string>
+    <string name="login_error_no_direccion">Direccion es obligatorio</string>
     <string name="title_menu_principal">Mis Pedidos de Hoy</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -43,6 +48,7 @@
     <string name="menu_home">Home</string>
     <string name="menu_order_list">Lista de Pedidos</string>
     <string name="add_order">Agregar Pedido</string>
+    <string name="save_order">Guardar Pedido</string>
 
     <string name="api_key">AIzaSyBc1R82oRWGpn-woMgkxL8j8WQIzS2tIGw</string>
 </resources>
