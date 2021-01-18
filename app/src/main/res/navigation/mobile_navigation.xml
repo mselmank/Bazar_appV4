@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="cl.matiasselman_android.bazar_appv4.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_addOrderFragment"
+            app:destination="@id/addOrderFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_order_list"
+        android:name="cl.matiasselman_android.bazar_appv4.ui.orderList.OrderListFragment"
+        android:label="@string/shipping"
+        tools:layout="@layout/fragment_order_list" />
+
+    <fragment
+        android:id="@+id/nav_order_maps"
+        android:name="cl.matiasselman_android.bazar_appv4.ui.orderMaps.MapsFragment"
+        android:label="@string/shipping_map"
+        tools:layout="@layout/fragment_maps" />
+    <fragment
+        android:id="@+id/addOrderFragment"
+        android:name="cl.matiasselman_android.bazar_appv4.ui.addOrder.AddOrderFragment"
+        android:label="add_order_fragment"
+        tools:layout="@layout/fragment_add_order" />
+</navigation>

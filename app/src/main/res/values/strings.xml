@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">Bazar_appV4</string>
     <string name="profile">Mi perfil </string>
-    <string name="shipping">Despachos </string>
+    <string name="shipping">Lista Despachos </string>
+    <string name="shipping_map">Mapa Despachos </string>
     <string name="about">Acerca de </string>
     <string name="home">Inicio</string>
     <string name="logout">Salir</string>
@@ -9,7 +10,7 @@
     <string name="settings">Configuracion</string>
     <string name="support">Soporte</string>
     <string name="verified">Verificado</string>
-    <string name="matias_selman">Matias Selman</string>
+    <string name="matias_selman">Bazar Chileno</string>
     <string name="loginMessage">Bazar Chileno</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -30,4 +31,18 @@
     <string name="login_error_password_length">Contraseña debe tener más de 8 caracteres</string>
     <string name="login_error_invalid_telefono">Telefono debe ser valido</string>
     <string name="login_error_no_password_equals">Contraseñas deben ser iguales</string>
+    <string name="title_menu_principal">Mis Pedidos de Hoy</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_order_list">Lista de Pedidos</string>
+    <string name="add_order">Agregar Pedido</string>
+
+    <string name="api_key">AIzaSyBc1R82oRWGpn-woMgkxL8j8WQIzS2tIGw</string>
 </resources>
