@@ -51,4 +51,6 @@
     <string name="save_order">Guardar Pedido</string>
 
     <string name="api_key">AIzaSyBc1R82oRWGpn-woMgkxL8j8WQIzS2tIGw</string>
+    <string name="filter_date">Filtrar Fecha</string>
+    <string name="open_map">Ver en Mapas</string>
 </resources>

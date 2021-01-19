@@ -1,4 +1,4 @@
-package cl.matiasselman_android.bazar_appv4.ui.orderList;
+package cl.matiasselman_android.bazar_appv4.ui.orderMaps;
 
 import android.util.Log;
 
@@ -16,18 +16,10 @@ import java.util.List;
 
 import cl.matiasselman_android.bazar_appv4.models.Order;
 
-public class OrderListViewModel extends ViewModel {
-
-    private MutableLiveData<String> mText;
+public class MapsListViewModel extends ViewModel {
     private MutableLiveData<List<Order>> mListOrder = new MutableLiveData<>();
 
-    public OrderListViewModel() {
-        mText = new MutableLiveData<>();
-        mText.setValue("This is gallery fragment");
-    }
-
-    public LiveData<String> getText() {
-        return mText;
+    public MapsListViewModel() {
     }
 
     public LiveData<List<Order>> getOrders() {

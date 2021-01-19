@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -63,26 +62,27 @@ public class AddOrderFragment extends Fragment {
     private void createOrder() {
         if (!validateFields()) return;
         createOrderBd(etIdOrder.getText().toString(),
-            etClient.getText().toString(),
-            etDescription.getText().toString(),
-            etDate.getText().toString(),
-            adress);
+                etClient.getText().toString(),
+                etDescription.getText().toString(),
+                etDate.getText().toString(),
+                adress);
     }
 
-    private void createOrderBd(String idOder, String clientName, String description, String date, Place adress) {
+    private void createOrderBd(String idOder, String clientName, String description, String date, Place address) {
         FirebaseFirestore firestore = FirebaseFirestore.getInstance();
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
         FirebaseUser user = mAuth.getCurrentUser();
         String email = user.getEmail();
-        GeoPoint latLng = new GeoPoint(adress.getLatLng().latitude, adress.getLatLng().longitude);
+        GeoPoint latLng = new GeoPoint(address.getLatLng().latitude, adress.getLatLng().longitude);
         CollectionReference collectionReference = firestore.collection("Ordenes");
         Order newOrder = new Order(idOder,
-            clientName,
-            description,
-            date,
-            adress.getName(),
-            adress.getAddress(),
-            latLng);
+                clientName,
+                description,
+                date,
+                address.getId(),
+                address.getName(),
+                address.getAddress(),
+                latLng);
 
         collectionReference.document(email).collection(date).document().set(newOrder);
 
@@ -110,7 +110,7 @@ public class AddOrderFragment extends Fragment {
             etDate.setError(getString(R.string.login_error_no_fecha));
         }
 
-        if(adress == null){
+        if (adress == null) {
             validacion = false;
             Toast.makeText(getActivity(), "Debe ingresar la direccion", Toast.LENGTH_LONG).show();
         }
@@ -132,8 +132,8 @@ public class AddOrderFragment extends Fragment {
 
         etDate.setOnClickListener(v -> {
             new DatePickerDialog(getActivity(), date, myCalendar
-                .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
-                myCalendar.get(Calendar.DAY_OF_MONTH)).show();
+                    .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
+                    myCalendar.get(Calendar.DAY_OF_MONTH)).show();
         });
 
         String apiKey = getString(R.string.api_key);
@@ -143,7 +143,7 @@ public class AddOrderFragment extends Fragment {
 
         // Initialize the AutocompleteSupportFragment.
         AutocompleteSupportFragment autocompleteFragment = (AutocompleteSupportFragment)
-            getChildFragmentManager().findFragmentById(R.id.autocomplete_fragment);
+                getChildFragmentManager().findFragmentById(R.id.autocomplete_fragment);
 
         assert autocompleteFragment != null;
         autocompleteFragment.setPlaceFields(Arrays.asList(Place.Field.ID, Place.Field.NAME, Place.Field.LAT_LNG, Place.Field.ADDRESS));

@@ -3,14 +3,15 @@ package cl.matiasselman_android.bazar_appv4.models;
 import com.google.firebase.firestore.GeoPoint;
 
 public class Order {
-    private String idOder, clientName, description, date, placeName, address;
+    private String idOder, clientName, description, date, idPlace, placeName, address;
     private GeoPoint geoPoint;
 
-    public Order(String idOder, String clientName, String description, String date, String placeName, String address, GeoPoint geoPoint) {
+    public Order(String idOder, String clientName, String description, String date, String idPlace, String placeName, String address, GeoPoint geoPoint) {
         this.idOder = idOder;
         this.clientName = clientName;
         this.description = description;
         this.date = date;
+        this.idPlace = idPlace;
         this.placeName = placeName;
         this.address = address;
         this.geoPoint = geoPoint;
@@ -70,5 +71,13 @@ public class Order {
 
     public void setGeoPoint(GeoPoint geoPoint) {
         this.geoPoint = geoPoint;
+    }
+
+    public String getIdPlace() {
+        return idPlace;
+    }
+
+    public void setIdPlace(String idPlace) {
+        this.idPlace = idPlace;
     }
 }
